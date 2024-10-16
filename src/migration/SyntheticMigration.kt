@@ -1,7 +1,7 @@
 package migration
 
 import java.io.File
-import java.util.ArrayList
+import java.util.regex.Pattern
 
 
 class SyntheticMigration {
@@ -35,14 +35,27 @@ class SyntheticMigration {
         return findFirstUsageInContent.replace(layoutRootPattern, "").replace("\"", "").trim()
     }
 
-    fun findAndReplaceContent(arrayListOf: ArrayList<String>, content: String): String {
+    fun findAndReplaceContent(arrayListOf: ArrayList<ReplaceItem>, content: String): String {
         var newContent = content
         for (item in arrayListOf) {
-            val snakeCase = item.replace("Component", "").replace("View", "").replace("Fragment", "")
-            val camelCase = convertSnakeToCamelCase(snakeCase)
-            newContent = newContent.replace(snakeCase, camelCase)
+            newContent = newContent.replace(item.oldName, item.newName)
         }
         return newContent
+    }
+
+    /**
+     * Extract all android:id values from the XML content
+     */
+    fun extractIdsFromLayout(content: String): List<String> {
+        val idPattern = Pattern.compile("""android:id="@\+id/(\w+)"""")
+        val matcher = idPattern.matcher(content)
+        val ids = arrayListOf<String>()
+
+        while (matcher.find()) {
+            ids.add(matcher.group(1))
+        }
+
+        return ids
     }
 
 }

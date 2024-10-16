@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="268af349-8f67-489b-bb83-c70b733738eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SyntheticMigration.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/migration/SyntheticMigration.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/assets/myFile.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/migration/SyntheticMigrationTest.kt" afterDir="false" />
+    <list default="true" id="268af349-8f67-489b-bb83-c70b733738eb" name="Changes" comment="+ first attempt to migrate synthetic to ViewBinding">
+      <change afterPath="$PROJECT_DIR$/src/migration/ReplaceItem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/assets/activity_constraint_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/migration/SyntheticMigration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/migration/SyntheticMigration.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/assets/myFile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/test/assets/myFile.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/migration/SyntheticMigrationTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/test/migration/SyntheticMigrationTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +24,15 @@
       <list>
         <option value="Kotlin Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Kotlin Data Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KotlinCodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -51,7 +48,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.SyntheticMigrationTest.executor": "Run",
     "JUnit.SyntheticMigrationTest.testConvertSnakeToCamelCase.executor": "Run",
+    "JUnit.SyntheticMigrationTest.testExtractIdsFromLayout.executor": "Run",
+    "JUnit.SyntheticMigrationTest.testFindAndReplaceContent.executor": "Run",
     "JUnit.SyntheticMigrationTest.testFindFirstUsage.executor": "Run",
     "JUnit.SyntheticMigrationTest.testReadFile.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
@@ -64,6 +64,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mike/IdeaProjects/SyntheticMigration/test/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,6 +76,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mike\IdeaProjects\SyntheticMigration\test\assets" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -82,7 +86,22 @@
       <recent name="migration" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SyntheticMigrationTest.testConvertSnakeToCamelCase">
+  <component name="RunManager" selected="Kotlin.MainKt">
+    <configuration name="SyntheticMigrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SyntheticMigration" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="migration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="migration" />
+      <option name="MAIN_CLASS_NAME" value="migration.SyntheticMigrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SyntheticMigrationTest.testConvertSnakeToCamelCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SyntheticMigration" />
       <extension name="coverage">
@@ -99,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SyntheticMigrationTest.testExtractLayoutFileName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SyntheticMigrationTest.testExtractIdsFromLayout" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SyntheticMigration" />
       <extension name="coverage">
         <pattern>
@@ -109,13 +128,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="migration" />
       <option name="MAIN_CLASS_NAME" value="migration.SyntheticMigrationTest" />
-      <option name="METHOD_NAME" value="testExtractLayoutFileName" />
+      <option name="METHOD_NAME" value="testExtractIdsFromLayout" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SyntheticMigrationTest.testReadFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SyntheticMigrationTest.testFindAndReplaceContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SyntheticMigration" />
       <extension name="coverage">
         <pattern>
@@ -125,7 +144,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="migration" />
       <option name="MAIN_CLASS_NAME" value="migration.SyntheticMigrationTest" />
-      <option name="METHOD_NAME" value="testReadFile" />
+      <option name="METHOD_NAME" value="testFindAndReplaceContent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -134,16 +153,26 @@
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
       <module name="SyntheticMigration" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\mike\IdeaProjects\SyntheticMigration\test\assets\myFile.kt C:\Users\mike\IdeaProjects\SyntheticMigration\test\assets" />
+      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.SyntheticMigrationTest" />
+      <item itemvalue="JUnit.SyntheticMigrationTest.testConvertSnakeToCamelCase" />
+      <item itemvalue="JUnit.SyntheticMigrationTest.testExtractIdsFromLayout" />
+      <item itemvalue="JUnit.SyntheticMigrationTest.testFindAndReplaceContent" />
+      <item itemvalue="Kotlin.MainKt" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SyntheticMigrationTest.testConvertSnakeToCamelCase" />
-        <item itemvalue="JUnit.SyntheticMigrationTest.testExtractLayoutFileName" />
-        <item itemvalue="JUnit.SyntheticMigrationTest.testReadFile" />
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.SyntheticMigrationTest" />
+        <item itemvalue="JUnit.SyntheticMigrationTest.testFindAndReplaceContent" />
+        <item itemvalue="JUnit.SyntheticMigrationTest.testExtractIdsFromLayout" />
+        <item itemvalue="JUnit.SyntheticMigrationTest.testConvertSnakeToCamelCase" />
       </list>
     </recent_temporary>
   </component>
@@ -164,23 +193,27 @@
       <option name="presentableId" value="Default" />
       <updated>1729027648515</updated>
       <workItem from="1729027649514" duration="272000" />
-      <workItem from="1729027929611" duration="1173000" />
+      <workItem from="1729027929611" duration="8202000" />
     </task>
+    <task id="LOCAL-00001" summary="+ first attempt to migrate synthetic to ViewBinding">
+      <option name="closed" value="true" />
+      <created>1729029408382</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729029408382</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="+ first attempt to migrate synthetic to ViewBinding" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ first attempt to migrate synthetic to ViewBinding" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
