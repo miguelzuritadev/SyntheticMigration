@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="268af349-8f67-489b-bb83-c70b733738eb" name="Changes" comment="+ extract layout file&#10;+ beginning to create the application tool">
+    <list default="true" id="268af349-8f67-489b-bb83-c70b733738eb" name="Changes" comment="+ replace file with the new content">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SyntheticMigration_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/migration/SyntheticMigration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/migration/SyntheticMigration.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +55,7 @@
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "git-widget-placeholder": "master",
@@ -66,6 +68,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/mike/IdeaProjects/SyntheticMigration/src/Main.kt",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editing.templates",
     "vue.rearranger.settings.migration": "true"
   }
@@ -148,7 +153,7 @@
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
       <module name="SyntheticMigration" />
-      <option name="PROGRAM_PARAMETERS" value="C:\Users\mike\IdeaProjects\SyntheticMigration\test\assets\myFile.kt C:\Users\mike\IdeaProjects\SyntheticMigration\test\assets" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\mike\IdeaProjects\SyntheticMigration\test\assets C:\Users\mike\IdeaProjects\SyntheticMigration\test\assets\myFile.kt" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -188,7 +193,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729027648515</updated>
       <workItem from="1729027649514" duration="272000" />
-      <workItem from="1729027929611" duration="8650000" />
+      <workItem from="1729027929611" duration="9031000" />
     </task>
     <task id="LOCAL-00001" summary="+ first attempt to migrate synthetic to ViewBinding">
       <option name="closed" value="true" />
@@ -206,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729053572370</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="+ replace file with the new content">
+      <option name="closed" value="true" />
+      <created>1729053908608</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729053908608</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +230,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="+ first attempt to migrate synthetic to ViewBinding" />
     <MESSAGE value="+ extract layout file&#10;+ beginning to create the application tool" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ extract layout file&#10;+ beginning to create the application tool" />
+    <MESSAGE value="+ replace file with the new content" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ replace file with the new content" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
