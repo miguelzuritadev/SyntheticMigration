@@ -1,5 +1,5 @@
-import migration.ReplaceItem
 import migration.SyntheticMigration
+import java.io.File
 
 
 fun main(args: Array<String>) {
@@ -19,12 +19,11 @@ fun main(args: Array<String>) {
 //    println("layoutFileNamePath:$layoutFileNamePath")
     val layout = syntheticMigration.readFile(layoutFileNamePath)
     val ids = syntheticMigration.extractIdsFromLayout(layout)
-    val replaceItems = ids.map {
-        val oldName = it
-        val newName = syntheticMigration.convertSnakeToCamelCase(it)
-        ReplaceItem(oldName, newName)
-    }
-
-    println("replaceItems:$replaceItems")
-
+    val replaceItems = syntheticMigration.convertToReplaceItems(ids, syntheticMigration)
+    //    println("replaceItems:$replaceItems")
+    val newContent = syntheticMigration.findAndReplaceContent(replaceItems, content)
+//    println(newContent)
+    val file = File(filePath)
+    file.writeText(newContent)
 }
+

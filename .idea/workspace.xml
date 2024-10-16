@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="268af349-8f67-489b-bb83-c70b733738eb" name="Changes" comment="+ first attempt to migrate synthetic to ViewBinding">
-      <change afterPath="$PROJECT_DIR$/src/migration/ReplaceItem.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/assets/activity_constraint_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+    <list default="true" id="268af349-8f67-489b-bb83-c70b733738eb" name="Changes" comment="+ extract layout file&#10;+ beginning to create the application tool">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/migration/SyntheticMigration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/migration/SyntheticMigration.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/assets/myFile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/test/assets/myFile.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/migration/SyntheticMigrationTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/test/migration/SyntheticMigrationTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +188,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729027648515</updated>
       <workItem from="1729027649514" duration="272000" />
-      <workItem from="1729027929611" duration="8202000" />
+      <workItem from="1729027929611" duration="8650000" />
     </task>
     <task id="LOCAL-00001" summary="+ first attempt to migrate synthetic to ViewBinding">
       <option name="closed" value="true" />
@@ -203,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729029408382</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="+ extract layout file&#10;+ beginning to create the application tool">
+      <option name="closed" value="true" />
+      <created>1729053572370</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729053572370</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +216,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="+ first attempt to migrate synthetic to ViewBinding" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ first attempt to migrate synthetic to ViewBinding" />
+    <MESSAGE value="+ extract layout file&#10;+ beginning to create the application tool" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ extract layout file&#10;+ beginning to create the application tool" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

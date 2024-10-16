@@ -35,7 +35,7 @@ class SyntheticMigration {
         return findFirstUsageInContent.replace(layoutRootPattern, "").replace("\"", "").trim()
     }
 
-    fun findAndReplaceContent(arrayListOf: ArrayList<ReplaceItem>, content: String): String {
+    fun findAndReplaceContent(arrayListOf: List<ReplaceItem>, content: String): String {
         var newContent = content
         for (item in arrayListOf) {
             newContent = newContent.replace(item.oldName, item.newName)
@@ -56,6 +56,15 @@ class SyntheticMigration {
         }
 
         return ids
+    }
+
+    fun convertToReplaceItems(ids: List<String>, syntheticMigration: SyntheticMigration): List<ReplaceItem> {
+        val replaceItems = ids.map {
+            val oldName = it
+            val newName = "binding." + syntheticMigration.convertSnakeToCamelCase(it)
+            ReplaceItem(oldName, newName)
+        }.toList()
+        return replaceItems
     }
 
 }
